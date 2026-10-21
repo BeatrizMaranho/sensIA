@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/wentaozhu/AutoShot",
+  "upstream_commit": "77c82ff826a9301bb173d9be786297a49d73d081",
+  "source_path": "gt_scenes_dict_baseline_v2.pickle",
+  "source_git_blob_sha": "339f7a5ba085fafc981f40dd01839db9a64b9157",
+  "source_sha256": "f26b4aec63d5df78b56619592342a024ba901f446fb46b4cc99cb700b8cf707a",
+  "ids_csv_sha256": "a0fe8db7c2a9c3c749eb04baac83dd5567f95e5dd8e933d1d02d61870b63072e",
+  "ids_count": 200,
+  "method": "Numeric video identifiers extracted statically from pickle string opcodes with pickletools.genops; no pickle.load or execution of reducers. Blob SHA checked against upstream Git tree. Evaluation script uses this dictionary as test ground truth.",
+  "evaluation_script_url": "https://github.com/wentaozhu/AutoShot/blob/77c82ff826a9301bb173d9be786297a49d73d081/compare_inference_baseline_groundtruth_v2.py",
+  "purpose": "Reserve membership only; this CSV contains no frame annotations and does not establish evaluation readiness."
+}
