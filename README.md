@@ -22,6 +22,7 @@ O recomendador vem depois: busca tema semelhante no catálogo e compara métrica
 - [Download e compartilhamento dos dados](data/README.md)
 - [Arquitetura e contrato entre frentes](docs/ARQUITETURA.md)
 - [MLOps e avaliação](docs/MLOPS.md)
+- [Metodologia do experimento da rede neural](docs/METODOLOGIA_REDE_NEURAL.md)
 - [Como contribuir](CONTRIBUTING.md)
 
 ## Preparar ambiente
