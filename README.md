@@ -2,7 +2,8 @@
 
 Análise explicável de características visuais de vídeos, com recomendações de conteúdos semelhantes que apresentem menor intensidade nas dimensões medidas.
 
-Projeto experimental da Residência em IA. Protótipo de um agente: **30/10/2026**. Entrega final: **11/12/2026**.
+Projeto experimental da Residência em IA. 
+Entrega final: **11/12/2026**.
 
 ## Estado atual
 
