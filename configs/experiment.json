@@ -1,0 +1,10 @@
+{
+  "seed": 42,
+  "task": "abrupt_shot_boundary_detection",
+  "dataset": "SHOT",
+  "split_policy": "preserve_official_test_and_split_training_by_source_video",
+  "status": "not_trained",
+  "decision_threshold": null,
+  "event_tolerance_frames": null,
+  "notes": "Definir protocolo e parâmetros na validação antes de avaliar teste."
+}

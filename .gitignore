@@ -1,0 +1,46 @@
+# Ambientes e segredos
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+# Dados locais: manter READMEs e marcadores
+/data/raw/**
+!/data/raw/**/
+!/data/raw/**/README.md
+!/data/raw/**/.gitkeep
+/data/interim/**
+!/data/interim/.gitkeep
+/data/processed/**
+!/data/processed/.gitkeep
+/knowledge/documents/**
+!/knowledge/documents/.gitkeep
+/knowledge/index/**
+!/knowledge/index/.gitkeep
+/models/**
+!/models/README.md
+/reports/**
+!/reports/README.md
+/mlruns/
+/mlartifacts/
+*.db
+# Arquivos grandes mesmo fora das pastas previstas
+*.mp4
+*.webm
+*.mkv
+*.avi
+*.mov
+*.zip
+*.tar
+*.gz
+*.pt
+*.pth
+*.keras
+*.h5
+*.pickle
+*.pkl
+.DS_Store

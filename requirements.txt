@@ -1,0 +1,5 @@
+# Dependências iniciais. Gerar lock das versões efetivamente testadas na primeira entrega.
+numpy>=1.26,<3
+opencv-python-headless>=4.8,<5
+mlflow>=3,<4
+# Framework neural, LLM e servidor serão adicionados nas respectivas implementações.
