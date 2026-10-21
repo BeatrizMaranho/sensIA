@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1",
+  "example_only": true,
+  "video_id": "fictitious_example",
+  "duration_s": 60,
+  "processing": {
+    "width_px": 640,
+    "height_px": 360,
+    "motion_algorithm": "to_be_selected",
+    "motion_unit": "pixels_per_frame_pair",
+    "frame_interval_s": null
+  },
+  "metrics": {
+    "motion_mean": null,
+    "saturation_mean_0_255": null,
+    "value_mean_0_255": null,
+    "vibrant_pixel_fraction": null
+  },
+  "shots": {
+    "status": "unavailable",
+    "detector": null,
+    "cut_count": null,
+    "cuts_per_minute": null,
+    "mean_shot_duration_s": null,
+    "median_shot_duration_s": null
+  },
+  "classification": {
+    "status": "not_configured",
+    "rule_version": null,
+    "label": null
+  },
+  "evidence": []
+}
