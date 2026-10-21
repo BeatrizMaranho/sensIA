@@ -184,3 +184,14 @@ Após o treinamento, acrescentar: versão final dos dados, quantidade de vídeos
 [9] MLFLOW. **MLflow Tracking.** https://mlflow.org/docs/latest/ml/tracking/ . Referência do registro planejado de experimentos; registro de treino ainda não executado.
 
 Documentações consultadas em 21/10/2026. URLs de documentação atual podem mudar de versão; não são prova da versão instalada. Decisões e observações próprias estão explicitadas ao longo do texto e não são atribuídas aos autores dessas ferramentas.
+
+
+## 13. Atualização v0.2 — preparo do piloto e repasse (21/10/2026)
+
+As seções anteriores preservam o registro anterior ao mapeamento do teste. Nesta atualização, foram identificados 200 IDs no arquivo usado pelo avaliador oficial AutoShot como ground truth de teste. A procedência e os hashes estão em `data/manifests/shot_reference/`. Há 27 correspondências nos 100 vídeos locais; eles ficam reservados, sem geração de pares de treino/validação.
+
+Foi implementado `scripts/prepare_shot_pilot.py`, com política conservadora documentada em [PREPARACAO_E_REPASSE_SHOT.md](PREPARACAO_E_REPASSE_SHOT.md). Aplicando a política aos relatórios compartilhados, o planejamento resulta em 43 vídeos de treino, 11 de validação, 27 reservados e 19 excluídos nesta versão. Os pares previstos são 331 positivos e 993 negativos no treino, 85 positivos e 255 negativos na validação. As contagens só serão consideradas entrega local efetiva após execução e verificação de hashes no computador da equipe.
+
+A margem de cinco frames, a razão de até três negativos por positivo e a fração de validação de 20% são escolhas operacionais explícitas, não prescrições científicas. A revisão exploratória já incluiu exemplos de vídeos posteriormente identificados como teste; essa exposição é uma limitação a registrar. O piloto fora do teste conhecido não é apresentado como reprodução completa dos splits/benchmark oficiais. Os dados reservados ainda exigem preparação própria para avaliação.
+
+A versão compartilhável inclui vídeos de treino/validação, pares por índice e proveniência, sem frames exportados. Ana prepara e confere o pacote; Luan confere os hashes e implementa loader/rede. A divisão por vídeo deve ser respeitada. A execução do treinamento, a fixação do ambiente e seu registro no MLflow permanecem pendentes. A preparação local será concluída quando o resumo e o pacote forem conferidos pela equipe.

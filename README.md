@@ -23,6 +23,7 @@ O recomendador vem depois: busca tema semelhante no catálogo e compara métrica
 - [Arquitetura e contrato entre frentes](docs/ARQUITETURA.md)
 - [MLOps e avaliação](docs/MLOPS.md)
 - [Metodologia do experimento da rede neural](docs/METODOLOGIA_REDE_NEURAL.md)
+- [Preparação do piloto SHOT e repasse para Ana e Luan](docs/PREPARACAO_E_REPASSE_SHOT.md)
 - [Como contribuir](CONTRIBUTING.md)
 
 ## Preparar ambiente
