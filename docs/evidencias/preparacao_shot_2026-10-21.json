@@ -1,0 +1,36 @@
+{
+  "record_date": "2026-10-21",
+  "origin": "Reported local audit CSVs and assistant-assisted visual review; not training results",
+  "audit": {
+    "videos": 100,
+    "opened": 100,
+    "with_annotation": 93,
+    "without_annotation": 7,
+    "flagged_videos": 93,
+    "interval_records": 1042,
+    "interval_status_counts": {
+      "within_bounds": 954,
+      "invalid_order_or_out_of_bounds": 82,
+      "unrecognized_format": 2,
+      "duplicate_interval": 3,
+      "non_monotonic_order": 1
+    },
+    "terminal_n_minus_1_n_flagged_records": 73
+  },
+  "visual_review": {
+    "reviewer": "assistant_visual_review",
+    "sample_seed": 42,
+    "videos": 5,
+    "candidate_records": 15,
+    "apparently_aligned": 12,
+    "uncertain_candidates": 3,
+    "terminal_review_records": 4,
+    "independent_human_validation": false
+  },
+  "training_executed": false,
+  "official_test_ids_mapped": false,
+  "validation_split_created": false,
+  "training_logged_to_mlflow": false,
+  "reported_opencv_version": "5.0.0",
+  "environment_lock_verified": false
+}
