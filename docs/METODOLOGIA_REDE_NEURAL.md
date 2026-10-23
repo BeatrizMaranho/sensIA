@@ -1,6 +1,8 @@
 # Metodologia do experimento de detecção de cortes — sensIA
 
-**Versão:** 0.1 — preparação anterior ao treinamento. **Data do registro:** 21/10/2026.
+**Versão atual:** 0.3 — primeiro piloto executado. **Atualização:** 23/10/2026.
+
+**Leitura do histórico:** as seções 1–12 preservam o registro v0.1 de 21/10/2026; a seção 13 registra o preparo v0.2. O estado atual e os resultados estão na seção 14 e em [RESULTADOS_PILOTO_CNN_V1.md](RESULTADOS_PILOTO_CNN_V1.md). As pendências descritas nas versões anteriores devem ser lidas com sua data.
 
 Este documento descreve os procedimentos realizados e as decisões metodológicas do experimento. Etapas futuras estão identificadas como planejadas. As evidências desta versão são os inventários, relatórios e montagens produzidos no computador da equipe e compartilhados para análise; não existem resultados de treinamento a relatar. A conclusão do experimento será acrescentada após execução e avaliação do modelo.
 
@@ -195,3 +197,24 @@ Foi implementado `scripts/prepare_shot_pilot.py`, com política conservadora doc
 A margem de cinco frames, a razão de até três negativos por positivo e a fração de validação de 20% são escolhas operacionais explícitas, não prescrições científicas. A revisão exploratória já incluiu exemplos de vídeos posteriormente identificados como teste; essa exposição é uma limitação a registrar. O piloto fora do teste conhecido não é apresentado como reprodução completa dos splits/benchmark oficiais. Os dados reservados ainda exigem preparação própria para avaliação.
 
 A versão compartilhável inclui vídeos de treino/validação, pares por índice e proveniência, sem frames exportados. Ana prepara e confere o pacote; Luan confere os hashes e implementa loader/rede. A divisão por vídeo deve ser respeitada. A execução do treinamento, a fixação do ambiente e seu registro no MLflow permanecem pendentes. A preparação local será concluída quando o resumo e o pacote forem conferidos pela equipe.
+
+
+## 14. Atualização v0.3 — primeiro treinamento e resultados (23/10/2026)
+
+A equipe executou o notebook no Colab em 21/10/2026. O pacote foi conferido pelo SHA-256 `620c30271977cf8cf20ae1da981404d80db53735ae665c6513c99452f5c4be8c`. Foram carregados 1.324 pares de 43 vídeos para treino e 340 pares de 11 vídeos distintos para validação, confirmando as contagens antes previstas. Os 27 vídeos do teste conhecido continuaram reservados; não há resultado de teste oficial.
+
+A CNN própria tem 26.129 parâmetros treináveis, recebe dois frames RGB concatenados em 96 × 96 × 6, foi treinada sem pesos pré-treinados e usa limiar de 0,5. Foram executadas dez épocas; os pesos da época oito, com menor loss de validação, foram restaurados. A matriz final contém 250 verdadeiros negativos, cinco falsos positivos, 21 falsos negativos e 64 verdadeiros positivos. Na validação amostrada, a acurácia foi 92,35%, a precisão de cortes 92,75%, o recall 75,29% e o F1 83,12%.
+
+As saídas registram a execução MLflow `5d73096d74474a05a4be4ab64abb4bc0` e a exportação dos resultados. A análise utiliza o notebook executado compartilhado, sem nova execução ou verificação independente do ZIP de resultados. O [relatório do piloto](RESULTADOS_PILOTO_CNN_V1.md) detalha configuração, comportamento por época, evidências, limitações e referências oficiais. Os [dados estruturados](evidencias/piloto_cnn_v1.json) registram a procedência.
+
+| Item | Estado atual |
+|---|---|
+| Inventário e aquisição do recorte | Concluídos para o piloto |
+| Política operacional e geração de pares | Executadas; revisão visual global dos rótulos permanece limitada |
+| Separação por vídeo | 43 treino e 11 validação; 27 reservados do teste conhecido |
+| Treinamento próprio | Primeiro experimento executado |
+| Tracking MLflow | Execução e exportação reportadas nas saídas; servidor compartilhado e Registry não implantados |
+| Revisão dos erros com contexto temporal | Pendente; fila de oito exemplos disponível |
+| Avaliação em sequências completas e teste reservado | Não executada |
+
+Este piloto passa a ser a referência inicial de comparação. A conclusão é restrita à classificação de pares amostrados; ainda não demonstra desempenho como detector de eventos em vídeo completo nem estima efeitos sobre saúde, bem-estar ou estímulo sensorial.

@@ -1,0 +1,9 @@
+video_name,frame_a,frame_b,original_label,predicted_label,score_displayed_rounded,observation_assistant,human_decision,reviewer,notes
+45869327157.mp4,2,3,0,1,0.77,Gameplay com elementos semelhantes; investigar movimento e mudancas locais.,pending,,
+45869327157.mp4,246,247,0,1,0.71,Mira em gameplay; investigar continuidade e mudancas locais.,pending,,
+45869327157.mp4,276,277,0,1,0.63,Mudanca de enquadramento na mira; verificar camera versus corte.,pending,,
+46457209838.mp4,74,75,0,1,1.0,Mudanca visual forte entre pessoa e rosto; conferir sequencia e anotacao.,pending,,
+45869327157.mp4,238,239,1,0,0.41,Gameplay com enquadramento semelhante; conferir fronteira anotada.,pending,,
+46457209838.mp4,925,926,1,0,0.03,Tela de pagina muito semelhante; verificar contexto temporal e anotacao.,pending,,
+48428664833.mp4,64,65,1,0,0.04,Mudanca no desenho com moldura fixa; investigar efeito da area estatica.,pending,,
+48428664833.mp4,400,401,1,0,0.04,Mudanca no desenho com moldura fixa; investigar efeito da area estatica.,pending,,
