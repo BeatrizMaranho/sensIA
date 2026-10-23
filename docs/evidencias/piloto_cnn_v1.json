@@ -1,0 +1,73 @@
+{
+  "experiment": "cnn_pares_v1",
+  "execution_date_utc": "2026-10-21",
+  "record_date_utc": "2026-10-23",
+  "source_notebook_sha256": "112009497819458b255b1dd2e1a9dd3479bde7a265582d6f529cf6d439bc842c",
+  "source": "Notebook executado compartilhado pela equipe; sem reexecucao nesta documentacao.",
+  "dataset_zip_sha256": "620c30271977cf8cf20ae1da981404d80db53735ae665c6513c99452f5c4be8c",
+  "results_zip_sha256_reported_by_notebook": "3461ec90c3e2f2759de86e66ba01e194fcc738cf50ce49adb4b562de87e8dc20",
+  "results_zip_independently_verified": false,
+  "mlflow_run_id": "5d73096d74474a05a4be4ab64abb4bc0",
+  "data": {
+    "train_videos": 43,
+    "validation_videos": 11,
+    "train_positive_pairs": 331,
+    "train_negative_pairs": 993,
+    "validation_positive_pairs": 85,
+    "validation_negative_pairs": 255,
+    "official_test_videos_reserved": 27
+  },
+  "configuration": {
+    "seed": 42,
+    "image_size": 96,
+    "input_channels": 6,
+    "trainable_parameters": 26129,
+    "epochs_max": 10,
+    "epochs_executed": 10,
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "threshold": 0.5,
+    "optimizer": "Adam",
+    "loss": "binary_crossentropy",
+    "dropout": 0.3,
+    "class_weight": null,
+    "pretrained_weights": null,
+    "early_stopping": {
+      "monitor": "val_loss",
+      "patience": 3,
+      "restore_best_weights": true
+    }
+  },
+  "environment_observed": {
+    "python": "3.13.15",
+    "tensorflow": "2.21.0",
+    "opencv": "4.14.0",
+    "gpu_detected": true
+  },
+  "selected_epoch_one_based": 8,
+  "selected_epoch_val_loss_rounded": 0.3176,
+  "validation": {
+    "true_negative": 250,
+    "false_positive": 5,
+    "false_negative": 21,
+    "true_positive": 64,
+    "accuracy": 0.9235294117647059,
+    "precision_cut": 0.927536231884058,
+    "recall_cut": 0.7529411764705882,
+    "f1_cut": 0.8311688311688312
+  },
+  "always_negative_baseline": {
+    "accuracy": 0.75,
+    "precision_cut": 0,
+    "recall_cut": 0,
+    "f1_cut": 0
+  },
+  "official_test_evaluated": false,
+  "limitations": [
+    "Metricas de pares amostrados; nao de eventos no video completo.",
+    "Selecao de checkpoint usou esta validacao.",
+    "Negativos selecionados longe de transicoes; proporcao 3:1 artificial.",
+    "Revisao visual inicial assistida por IA; sem confirmacao humana independente de todos os rotulos."
+  ],
+  "epoch_csv_precision": "Valores arredondados do log exibido; history.csv original nao foi fornecido separadamente."
+}
